@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="us-en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width initial-scale=1">
+<head>
+    <title>HTML-CSS COMBINATION</title>
+    <style>
+          
+            
+        
+
+
+          
+          
+
+
+          
+    </style>
+</head>
+<body>
+    <button id="start" aria-placeholder="START">
+        START
+    </button>
+    <p class="paragraph1">this is a paragraph</p>
+    <p class="paragraph1">this is another paragraph</p>
+    <h name="heading1"></h>
+    <h1>hey how are you?</h1>
+
+    
+</body>
+<script>
+const start=document.getElementById("start")
+
+start.innerHTML='samaresh biswas'
+start.style.backgroundColor='red'
+start.textContent='bold'
+const para=document.getElementsByClassName('paragraph1')[1]
+
+para.style.backgroundColor='green'
+const heading1=document.getElementsByName('heading1')[0]
+heading1.innerHTML='computer programming is very interesting'
+const h1=document.getElementsByTagName('h1')[0]
+const clas=document.querySelector('.paragraph1')
+clas.innerHTML='change paragraph'
+const tab=document.querySelectorAll('p')[0]
+tab.innerHTML='change another paragraph'
+tab.style.backgroundColor='yellow'
+
+</script>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <canvas id="myCanvas" width="300" height="150">mycavas</canvas>
+        <button onclick="myFunction()">click me</button>
+
+    <script>
+       const id= document.getElementById('myCanvas')
+       console.log(id)
+       const ctx=id.getContext("2d")
+       ctx.beginPath();
+       ctx.moveTo(20,20);
+       ctx.lineTo(20,100);
+       ctx.lineTo(70,100);
+       ctx.stroke();
+    </script>
+    
+    </body>
+</html>

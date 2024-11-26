@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta lang="us-en">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <title>dom practice</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1 id="main heading">Favorite Sports</h1>
+            <ul id="list">
+                <li class="list-items">The Matrix</li>
+                <li class="list-items">Stars Wars</li>
+                <li class="list-items">Harry Potter</li>
+                <li class="list-items">Lords of Rings</li>
+                <li class="list-items">Marvels</li>
+            </ul>
+            <div 
+             <button onclick="addElement()">add new</button>
+            </div>
+        
+        </div>
+        <script>
+          const ul=document.getElementById('list')
+          ul.addEventListener('click',(e)=>{
+            
+                if(e.target.innerText==='The Matrix'){ 
+            e.target.style.backgroundColor='yellow'
+            
+          }else{
+            e.target.style.backgroundColor="red"
+          
+          }
+        })
+        function addElement(){
+            const nElement=document.createElement('li')
+            nElement.textContent='Samaresh Biswas'
+            list.appendChild(nElement)
+        
+            
+        }
+        </script>
+    </body>
+</html>

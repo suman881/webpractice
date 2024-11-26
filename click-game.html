@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <meta lang="us-en">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <head>
+        <title>
+            
+
+        </title>
+        <style>
+            .container{
+                width: 300px;
+                height: 400px;
+                background-color: green;
+                border: none;
+            }
+            .
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <button id="start" style="width: 160px;height: 40px;border-radius: 25px;">START</button>
+            <button id="click"  style=" width: 160px;height: 40px;border-radius: 25px;">CLICK</button>
+            <button id="stats"      style="width: 160px;height: 40px;border-radius:50px;"></button>
+        </div>
+        <script>
+            let startBtn=document.getElementById('start')
+            let clickBtn=document.getElementById('click')
+            let stats=document.getElementById('stats')
+            let winScore=10;
+            let count=0
+            startBtn.addEventListener('click',()=>{
+                start()
+            })
+            clickBtn.addEventListener('click',()=>{
+                count++;
+                stats.textContent=count;
+            })
+            let start=()=>{
+                count=0;
+                stats.textContent=count;
+                clickBtn.removeAttribute('disabled')
+                startCounting();
+            }
+            let startCounting =()=>{
+                setTimeout(()=>{
+                    if(isWin()){
+                        stats.textContent='you win'
+                    }else{
+                        stats.textContent='you lost'
+                    }
+                    clickBtn.setAttribute('disabled',true)
+                },4000)
+            }
+            let isWin=()=>{
+                if(count<winScore){
+                    return false;
+                }else{
+                    return true;
+                }
+            }
+        </script>
+    </body>
+</html>

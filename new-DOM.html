@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            <link rel="stylesheet" href="style.css">
+        </style>
+    </head>
+    <body>
+        <div>Abcd</div>
+            <h1 class="heading"> DOM manipulation</h1>
+            <h2 class="heading"> javascript is a beautiful language</h2>
+            <p> DR.Samaresh biswas</p>
+            <button id="button">Click Me</button>
+        
+        <script>
+          let h= document.querySelector('.heading')
+          h.style.backgroundColor='blue'
+          let p=document.querySelector('p')
+          p.style.backgroundColor='red'
+          let btn=document.getElementById('button')
+          btn.style.backgroundColor='blue'
+          btn.style.color='white'
+          btn.addEventListener('click',()=>{
+            console.log('btn was clicked')
+          })
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+.subscribe-button{
+    background-color: BLUE;
+    color: white;
+    width: 150px;
+    height: 45px;
+}
+.subscribe-button:hover{
+    opacity:0.4;
+}
+
+.Tweeter-button{
+    background-color: RED;
+    width: 150px;
+    height: 70px;
+    border-radius: 25px;
+}
+.Tweeter-button:active{
+    opacity:0.6;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta lang="us-en">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width",initial-scale="1">
+        <title></title>
+        <style>
+             <link rel="stylesheet" href="style.css" /link>
+             *{
+                font-family:sans-serif;
+                background-color:white;
+
+             }
+            #container{
+                margin: 50px;
+
+             }
+             h1{
+                border-bottom: 1px solid gray;
+             }
+             #parent{
+                margin-top:30px ;
+                padding: 20px;
+                border:1px solid red
+                
+
+             }
+             form{
+                margin-top: 25px;
+                padding:20px;
+                border:1px solid blue
+                
+             }
+        </style>
+    </head>
+    <body>
+        <div class="=container">
+            <h1>dom delegation</h1>
+        <div class="parent" id="parent">
+            <form id="form">
+                <button type="button" id="button">BUTTON</button>
+            </form>
+        </div>
+        </div>
+
+
+        <script>
+            const parent=document.getElementById('parent')
+            const form=document.getElementById('form')
+            const btn=document.getElementById('button')
+            parent.addEventListener('click',listener)
+            form.addEventListener('click',listener)
+                
+            btn.addEventListener('click',listener)
+
+
+            function listener(event){
+                console.log('btn was clicked')
+            }
+        
+
+        </script>
+    </body>
+</html>

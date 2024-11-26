@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta lang="us-en">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" initial-scale="1">
+    <title></title>
+    <style>
+        body{
+            height: 100%;
+            width: 100%;
+        }
+        #box{
+            height: 300px;
+            width: 300px;
+            background-color: red;
+            text-align: center;
+            font-size: 13em;
+            animation-name: slideLeft;
+            animation-duration: 2s;
+            animation-iteration-count: 3;
+            animation-direction: normal;
+            animation-timing-function: ease-in-out;
+        
+            
+        }
+        
+              
+        
+        @keyframes slideLeft{
+            from{transform: translateX(300%)}
+        }
+        @keyframes slideRight{
+            to{
+                transform: translateX(300%)
+            }
+        } 
+        @keyframes slideUp{
+            from{
+         transform: translateX(300%);
+            }
+        }
+        @keyframes slidWown{
+            to{
+                transform:translateX(300%)
+            }
+        }
+        @keyframes rotate{
+            100%{
+                transform: rotateX(360deg);
+            }
+        }
+        @keyframes grow{
+            50%{
+                transform: scale(2,2);
+            }
+        }
+        @keyframes shrink{
+            50%{
+                transform: scale(0.5,0.5);
+            }
+        }
+        @keyframes fade{
+            50%{
+                opacity: 0;
+            }
+        }
+        @keyframes colorChange{
+            0%
+                {background-color: red;}
+                20%{background-color: blue}
+                60%{background-color:yellow}
+            }
+        @keyframes glow{
+            50%{box-shadow:green;}
+        }
+        img{
+            animation-name: slideRight;
+            animation-duration: 2s;
+            animation-iteration-count: 13;
+            animation-direction: alternate-reverse;
+            animation-timing-function: ease-in-out;
+         
+        }
+
+    
+    </style>
+    </head>
+    <body>
+        
+        <img src="R.jpeg" width="200px" height="150">
+        
+        
+    </body>
+</html>

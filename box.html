@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        div{
+            border:2px solid green;
+            width:300px;
+            height:100px;
+            background-color: gray;
+            text-decoration-color: brown;
+            text-justify:distribute-all-lines;
+            
+        }
+    
+     
+        
+    </style>
+    </head>
+    <body>
+        <div class="box">box1
+        <button id="btn" type="submit" style=" border:12px solid white
+        width: 200px;
+        height: 50px;
+        text-align: center;
+        margin-top: 35px;
+        margin: left 150px;
+        cursor:pointer; ">ClickMe</button>
+        </div>
+        <script>
+            let box=document.querySelector('.box')
+            
+            let clickme=document.getElementById('btn')
+           clickme.onclick=function(){
+            console.log('btn was clicked')
+           }
+            box.addEventListener('click',function(){
+                console.log('box1 was clicked')
+
+            })
+           clickme.onclick=function(event){
+            event.stopPropagation();
+            console.log('btn was clicked')
+           }
+           
+        </script>
+
+    </body>
+</html>

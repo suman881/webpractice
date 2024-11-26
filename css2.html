@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta lang="us-en">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial -scale=1">
+    <link rel=" stylesheet" href="">
+    <style>
+            
+        
+
+    </style>
+    </head>
+    <body>
+        <div class="language">
+          <ul id="list">
+            <li>phython</li>
+            <li>javascript</li> 
+            <li>PHP</li> 
+            <li>FORTRAN</li>
+            <li>JAVA</li>
+
+          </ul>
+          <div>
+            <button onclick="addElement">SAMARESH</button>
+          </div>
+        </div>
+        <script>
+            const cl=document.getElementById('list')
+            cl.addEventListener('click',(e)=>{
+                if(e.target.matches('li')){ 
+                    if(e.target.innerText==='javascript'){
+                e.target.style.backgroundColor="yellow"
+            }else{
+                e.target.style.backgroundColor="blue"
+            }
+        }
+    })
+    
+        </script>
+    </body>
+
+</html>

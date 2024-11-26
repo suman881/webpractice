@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta lang="us-en">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=0.1">
+        <style>
+            button {
+                height: 75px;
+                width: 200px;
+                background-color: blue;
+                color:white
+                
+                
+            }
+            button:hover{
+                opacity: 0.1;
+            
+
+            }
+
+        </style>
+        
+    </head>
+    <body>
+        <div id="demo">
+            <h2>ajax call for data</h2>
+            
+            <button type="button"  onclick="loadDoc()">Click me</button>
+        </div>
+        <script>
+            function loadDoc(){ 
+            let xhttp=new XMLHttpRequest()
+            xhttp.onreadystatechange=function(){
+                if(this.readyState==4 && this.status==200){
+                    document.getElementById('demo').innerHTML=this.responseText
+                }
+            }
+        xhttp.open("GET","http://jsonplaceholder.typicode.com",true)
+        xhttp.send()
+            }
+            
+
+        </script>
+    </body>
+</html>
