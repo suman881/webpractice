@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>diabetes checkup</title>
+    <style>
+        
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color:white
+        }
+        .fbs{
+            border:3px sollid red;
+            
+        }
+        .rbs{
+            border:3px solid yellow;
+            
+        }
+        .Btn{
+            border: 2px;
+            width: 100px;
+            height: 50px;
+        }
+        h1{
+            font-weight: bold;
+            color: green;
+        }
+        h2{
+            font-weight: bold;
+            color: red;
+        }
+        ul{
+            background-color: lawngreen
+        }
+    </style>
+</head>
+<body>
+    <label>Fasting blood sugar </label>
+    <input id="fbs" placeholder="mmol/L">
+    <br>
+    <br>
+
+    <label>Random blood sugar</label>
+    <input id="rbs" placeholder="mmol/L"
+    <br>
+    <br>
+    <button id="Btn">Submit</button>
+    <h1>Some complication of diabetes mellitus includes:</h1>
+    <ul>
+       <li> Heart disease: A common complication of diabetes, which can include heart attack and stroke </li>
+       <li> Eye problems: Can include trouble seeing, light sensitivity, and blindness </li>
+       <li> Kidney damage: Can lead to kidney failure and the need for dialysis or transplant</li>
+       <li> Nerve damage: Can cause pain, burning, tingling, loss of feeling, and difficulty having an erection </li>
+        <li>Foot problems: Can include foot ulceration, neuropathic joint degeneration, and Charcot arthropathy</li>
+       <li> Skin infections: A common complication of diabetes</li> 
+        <li>Sexual dysfunction: Can include erectile dysfunction or vaginal dryness </li>
+        <li>Gastroparesis: A complication of diabetes </li>
+        <li>Hearing loss: A complication of diabetes </li>
+       <li> Oral health issues: Can include gum (periodontal) disease </li>
+       <li> Hypoglycemia: A major complication of diabetes treatment that occurs when blood sugar is very low </li>
+        <li>Complications can be prevented or delayed by: Strict blood glucose control, Early treatment with medication, Proper care of feet, and Regular eye examinations.</li>
+    </ul>
+        <h2> Some informations about prediabetes:</h2>
+        <ul><
+    <li>Prediabetes is a component of metabolic syndrome and is characterized by elevated blood sugar levels that fall below the threshold to diagnose diabetes mellitus. It usually does not cause symptoms but people with prediabetes often have obesity (especially abdominal or visceral obesity), dyslipidemia with high triglycerides and/or low HDL cholesterol, and hypertension.[1] It is also associated with increased risk for cardiovascular disease (CVD). Prediabetes is more accurately considered an early stage of diabetes as health complications associated with type 2 diabetes often occur before the diagnosis of diabetes.</li>
+
+      <li> Prediabetes can be diagnosed by measuring hemoglobin A1c, fasting glucose, or glucose tolerance test. Many people may be diagnosed through routine screening tests. The primary treatment approach includes lifestyle changes such as exercise and dietary adjustments. Some medications can be used to reduce the risks associated with prediabetes. There is a high rate of progression to type 2 diabetes but not everyone with prediabetes develops type 2 diabetes.[2] Prediabetes can be a reversible condition with lifestyle changes.
+        
+       <li> For many people, prediabetes and diabetes are diagnosed through a routine screening at a check-up. The earlier prediabetes is diagnosed, the more likely an intervention will be successful</li>>
+      </ul>
+    <script>
+        document.getElementById('Btn').onclick=function(){
+            let fbs=document.getElementById('fbs').value;
+            let rbs=document.getElementById('rbs').value;
+            if( rbs>=11.1 || fbs>=7){
+                console.log('You are suffering from diabetes.please go to the physician and take approprite advice given by the doctor')
+            }else if(fbs<=5.5 && fbs<=7.8){
+                console.log('You are free from diabetes,please keep it up and adopt a healthy life style')
+            }else
+            console.log('You are in the state of prediabetes.please becareful and do exercise regularly as well as keep your bodyweight within normal physiological limits')
+        }
+
+    </script>
+</body>
+</html>
