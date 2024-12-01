@@ -25,11 +25,15 @@
         }
         h1{
             font-weight: bold;
-            color: green;
+            color: red
         }
         h2{
             font-weight: bold;
-            color: red;
+            color: green
+        }
+        h3{
+            font-weight: bold;
+            color: blue
         }
         ul{
             background-color: lawngreen
@@ -37,6 +41,7 @@
     </style>
 </head>
 <body>
+    
     <label>Fasting blood sugar </label>
     <input id="fbs" placeholder="mmol/L">
     <br>
@@ -47,7 +52,15 @@
     <br>
     <br>
     <button id="Btn">Submit</button>
-    <h1>Some complication of diabetes mellitus includes:</h1>
+    <ul>
+        <h1> Interpretation of different blood glucose levels</h1>
+        <li>Normal blood glucose/sugar level:Fasting blood sugar:3.9 to 5.5mmol/L() or 70 to 99 mg/dL </li>
+        <li>Prediabetes condition: when Fasting blood glucoe level between 5.6 to 6.9 mmol/L(110-125mg/dL) or Random blood glucose between 7.9 to 11 mmol/L(140 to 200mg/dL)</li>
+        <li>Diabete:when Fasting blood glucose 7mmol/L(126 mg/dL ) or more and Random blood glucose 11.1 mmol/L(200mg/dL) or more</li>
+        <li> ##Hypoglycemia (who suffering from diabetes)blood glucose level below 3.9mmol/L ( below 70mg/dL)</li>
+        <li>## Hypoglycemia (who are not suffering from diabete) blood glucoe level below 3mmol/L(below 55mg/dL)</li>
+    </ul>
+    <h2>Some complication of diabetes mellitus includes:</h2>
     <ul>
        <li> Heart disease: A common complication of diabetes, which can include heart attack and stroke </li>
        <li> Eye problems: Can include trouble seeing, light sensitivity, and blindness </li>
@@ -62,7 +75,7 @@
        <li> Hypoglycemia: A major complication of diabetes treatment that occurs when blood sugar is very low </li>
         <li>Complications can be prevented or delayed by: Strict blood glucose control, Early treatment with medication, Proper care of feet, and Regular eye examinations.</li>
     </ul>
-        <h2> Some informations about prediabetes:</h2>
+        <h3> Some informations about prediabetes:</h3>
         <ul><
     <li>Prediabetes is a component of metabolic syndrome and is characterized by elevated blood sugar levels that fall below the threshold to diagnose diabetes mellitus. It usually does not cause symptoms but people with prediabetes often have obesity (especially abdominal or visceral obesity), dyslipidemia with high triglycerides and/or low HDL cholesterol, and hypertension.[1] It is also associated with increased risk for cardiovascular disease (CVD). Prediabetes is more accurately considered an early stage of diabetes as health complications associated with type 2 diabetes often occur before the diagnosis of diabetes.</li>
 
@@ -75,12 +88,18 @@
             let fbs=document.getElementById('fbs').value;
             let rbs=document.getElementById('rbs').value;
             if( rbs>=11.1 || fbs>=7){
-                console.log('You are suffering from diabetes.please go to the physician and take approprite advice given by the doctor')
-            }else if(fbs<=5.5 && fbs<=7.8){
-                console.log('You are free from diabetes,please keep it up and adopt a healthy life style')
-            }else
-            console.log('You are in the state of prediabetes.please becareful and do exercise regularly as well as keep your bodyweight within normal physiological limits')
-        }
+                window.alert('You are suffering from diabetes.please go to the physician and take approprite advice given by the doctor')
+        }else if(rbs<=3.8 || fbs<=3.8){
+            window.alert('Low/Hypoglycemia.please eat/ingest some sugary diet like sugar,sweet chocolate/biscuits etc')
+        }else if(rbs<=7.8 && fbs<=5.9){ 
+            window.alert('You are free from diabetes.please adopt a healthy lifestyle')
+        }else
+        window.alert('you are in the state of prediabetes.please be careful and do physical exercise regularly and keep your bodyweight within normal physiological limit')
+    }
+
+        
+
+        
 
     </script>
 </body>
