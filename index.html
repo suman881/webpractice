@@ -14,6 +14,16 @@
 
     </head>
     <body>
+        <h5>Blood sugar monitoring app</h5>
+<label>Fasting Blood Glucose</label>
+        <input id="fbs" placeholder="mmol/L"
+            <br>
+             <br>
+        <label>Random Blood Glucose</label>
+        <input id="rbs" placeholder="mmol/L"
+            <br>
+        <br>
+        <button id="Btn">submit</button>
         
                        <header>
                                  <h1> Dr.Samaresh Biswas.MBBS</h1>
@@ -62,7 +72,21 @@
         <footer>
             <p>&copy;2024 Dr.Samaresh Biswas's Practice</p>
         </footer>
+<sript>
+    document.getElementById('Btn').onclick=function(){
+            let fbs=document.getElementById('fbs').value;
+            let rbs=document.getElementById('rbs').value;
+            if( rbs>=11.1 || fbs>=7){
+                window.alert('You are suffering from diabetes.please go to the physician and take approprite advice given by the doctor')
+        }else if(rbs<=3.8 || fbs<=3.8){
+            window.alert('Low/Hypoglycemia.please eat/ingest some sugary diet like sugar,sweet chocolate/biscuits etc')
+        }else if(rbs<=7.8 && fbs<=5.9){ 
+            window.alert('You are free from diabetes.please adopt a healthy lifestyle')
+        }else
+        window.alert('you are in the state of prediabetes.please be careful and do physical exercise regularly and keep your bodyweight within normal physiological limit')
+    }
 
+</sript>
         
     </body>
 </html>
