@@ -3,104 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>diabetes checkup</title>
+    <title>Document</title>
     <style>
-        
         body{
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            background-color:white
-        }
-        .fbs{
-            border:3px sollid red;
+            font-family: Arial, Helvetica, sans-serif;
+            height: 800px;
+            width: 800px;
+            text-align: center;
             
-        }
-        .rbs{
-            border:3px solid yellow;
-            
-        }
-        .Btn{
-            border: 2px;
-            width: 100px;
-            height: 50px;
         }
         h1{
-            font-weight: bold;
-            color: red
+            color: red;
+            font-size: larger;
         }
-        h2{
-            font-weight: bold;
-            color: green
+        #bt{
+            border: 5px solid green;
+            color: #ff0000;
+            height: 40px;
+            width: 120px;
+            border-radius: 25px;
         }
-        h3{
-            font-weight: bold;
-            color: blue
+          #btn{
+            border: 5px solid greenyellow;
+            color: blue;
+            height:40px;
+            width: 120px;
+            border-radius: 25px;
         }
-        ul{
-            background-color: lawngreen
+        #in{
+            border: 5px solid red;
+            border-radius: 25px;
         }
+        #int{
+            border: 5px solid blue;
+            border-radius: 25px;
+        }
+    
     </style>
 </head>
 <body>
+    <body>
+    <h1>Diabetes Screening App</h1>
+    <p1> যদি রক্তে, সুগারের মাত্রা জানা থাকে তাহলে আমার এই অ্যাপ ব্যবহার করে আপনি জানতে পারবেন আপনার ডায়াবেটিস হয়েছে কি-না?</p1>
+    <br>
+    <label for="in">Input the value of fasting blood sugar level (mmol/L)
+        সকালে নাস্তার পূর্বে/খালিপেটে ডায়াবেটিসের মাত্রা লিখুনঃ
+    </label>
+    <input id="in" type="number" placeholder="type here/এখানে লিখুন" step="0.1">
+    <br>
+    <br>
+    <button id="btn" type="submit" onclick="dm()">button for fbs/এখানে চাপুন</button>
+
+    <br>
+    <br>
+    <label for="in">input the value of random blood sugar level(mmol/L)খাবার পর দিনের যে কোন সময়ে আপনার ডায়াবেটিসের মাত্রা লিখুন:</label>
+    <input id="int" type="number" placeholder="type here/এখানে লিখুন" steps="0.1">
+    <br>
+    <br>
+    <button id="bt" type="submit" onclick="dm2()">button for rbs/এখানে চাপুন</button>
+    <h2>**fbs=fasting blood sugar.**rbs=random blood sugar</h2>
     
-    <label>Fasting blood sugar </label>
-    <input id="fbs" placeholder="mmol/L">
+    
+    
+    <p2 id="para">Result will be shown here/ফলাফল দেখুন:-</p2>
     <br>
     <br>
+    <!-- Disclaimer Section -->
+<section id="disclaimer" style="padding: 20px; background-color: #f9f9f9; border-top: 1px solid #ccc;">
+  <h2>⚠️ Disclaimer</h2>
+  <p><strong>This diabetes screening tool is intended for informational and educational purposes only.</strong></p>
+  <p>It does not provide a medical diagnosis and should not be used as a substitute for professional medical advice, diagnosis, or treatment. Always consult a qualified healthcare provider for any health concerns or decisions.</p>
+  <p>The creators of this app/website are not responsible for any actions taken based on the results provided.</p>
+  <p>Use of this tool implies acceptance of these terms.</p>
 
-    <label>Random blood sugar</label>
-    <input id="rbs" placeholder="mmol/L"
-    <br>
-    <br>
-    <button id="Btn">Submit</button>
-    <ul>
-        <h1> Interpretation of different blood glucose levels</h1>
-        <li>Normal blood glucose/sugar level:Fasting blood sugar:3.9 to 5.5mmol/L() or 70 to 99 mg/dL </li>
-        <li>Prediabetes condition: when Fasting blood glucoe level between 5.6 to 6.9 mmol/L(110-125mg/dL) or Random blood glucose between 7.9 to 11 mmol/L(140 to 200mg/dL)</li>
-        <li>Diabete:when Fasting blood glucose 7mmol/L(126 mg/dL ) or more and Random blood glucose 11.1 mmol/L(200mg/dL) or more</li>
-        <li> ##Hypoglycemia (who suffering from diabetes)blood glucose level below 3.9mmol/L ( below 70mg/dL)</li>
-        <li>## Hypoglycemia (who are not suffering from diabete) blood glucoe level below 3mmol/L(below 55mg/dL)</li>
-    </ul>
-    <h2>Some complication of diabetes mellitus includes:</h2>
-    <ul>
-       <li> Heart disease: A common complication of diabetes, which can include heart attack and stroke </li>
-       <li> Eye problems: Can include trouble seeing, light sensitivity, and blindness </li>
-       <li> Kidney damage: Can lead to kidney failure and the need for dialysis or transplant</li>
-       <li> Nerve damage: Can cause pain, burning, tingling, loss of feeling, and difficulty having an erection </li>
-        <li>Foot problems: Can include foot ulceration, neuropathic joint degeneration, and Charcot arthropathy</li>
-       <li> Skin infections: A common complication of diabetes</li> 
-        <li>Sexual dysfunction: Can include erectile dysfunction or vaginal dryness </li>
-        <li>Gastroparesis: A complication of diabetes </li>
-        <li>Hearing loss: A complication of diabetes </li>
-       <li> Oral health issues: Can include gum (periodontal) disease </li>
-       <li> Hypoglycemia: A major complication of diabetes treatment that occurs when blood sugar is very low </li>
-        <li>Complications can be prevented or delayed by: Strict blood glucose control, Early treatment with medication, Proper care of feet, and Regular eye examinations.</li>
-    </ul>
-        <h3> Some informations about prediabetes:</h3>
-        <ul><
-    <li>Prediabetes is a component of metabolic syndrome and is characterized by elevated blood sugar levels that fall below the threshold to diagnose diabetes mellitus. It usually does not cause symptoms but people with prediabetes often have obesity (especially abdominal or visceral obesity), dyslipidemia with high triglycerides and/or low HDL cholesterol, and hypertension.[1] It is also associated with increased risk for cardiovascular disease (CVD). Prediabetes is more accurately considered an early stage of diabetes as health complications associated with type 2 diabetes often occur before the diagnosis of diabetes.</li>
+  <hr>
 
-      <li> Prediabetes can be diagnosed by measuring hemoglobin A1c, fasting glucose, or glucose tolerance test. Many people may be diagnosed through routine screening tests. The primary treatment approach includes lifestyle changes such as exercise and dietary adjustments. Some medications can be used to reduce the risks associated with prediabetes. There is a high rate of progression to type 2 diabetes but not everyone with prediabetes develops type 2 diabetes.[2] Prediabetes can be a reversible condition with lifestyle changes.
-        
-       <li> For many people, prediabetes and diabetes are diagnosed through a routine screening at a check-up. The earlier prediabetes is diagnosed, the more likely an intervention will be successful</li>>
-      </ul>
+  <h2>⚠️ দায়বদ্ধতা ঘোষণা</h2>
+  <p><strong>এই ডায়াবেটিস স্ক্রিনিং টুলটি শুধুমাত্র তথ্য ও শিক্ষামূলক উদ্দেশ্যে তৈরি।</strong></p>
+  <p>এটি কোনো চিকিৎসা নির্ণয় বা প্রদান করে না এবং চিকিৎসকের পরামর্শ, নির্ণয় বা চিকিৎসার বিকল্প হিসেবে ব্যবহারযোগ্য নয়।</p>
+  <p>স্বাস্থ্য সংক্রান্ত যেকোনো সিদ্ধান্তের জন্য একজন অভিজ্ঞ ডাক্তারের সঙ্গে পরামর্শ করুন।</p>
+  <p>এই অ্যাপ/ওয়েবসাইটের ফলাফলের ভিত্তিতে নেওয়া যেকোনো পদক্ষেপের জন্য নির্মাতারা দায়ী নন।</p>
+  <p>এই টুল ব্যবহার করলে আপনি উপরোক্ত শর্তাবলীর সাথে সম্মত হচ্ছেন।</p>
+</section>
+
+    <h3>ডায়াবেটিস সম্পর্কে জানুনঃ</h3>
+    <p3>🩺 ডায়াবেটিস নিয়ন্ত্রণের গুরুত্বঃ-
+ডায়াবেটিস একটি নীরব ঘাতক রোগ, যা রক্তে গ্লুকোজের মাত্রা অতিরিক্ত বেড়ে যাওয়ার ফলে শরীরের বিভিন্ন অঙ্গ-প্রত্যঙ্গে দীর্ঘমেয়াদী ক্ষতি সাধন করে। বাংলাদেশসহ বিশ্বের বহু মানুষ এই রোগে আক্রান্ত, এবং অনেকেই নিয়মিত ওষুধ বা ইনসুলিন গ্রহণ করলেও রক্তে শর্করার মাত্রা নিয়ন্ত্রণে রাখতে ব্যর্থ হন। এর ফলে তারা নানা জটিলতায় আক্রান্ত হন—যেমন কিডনি বিকল, চোখের দৃষ্টিশক্তি হ্রাস,যৌন দুর্বলতা ,চর্মরোগ ,সহজে কোন ঘা সারে না ফলে অনেক সময় হাত-পা কেটে ফেলতে হয়,প্যারালাইসিস, হৃদরোগ, স্নায়ুর সমস্যা , স্মৃতিশক্তি হ্রাস পাওয়া,হতাশা,অস্থিরতা,নিদ্রাহীনতা ইত্যাদি।</p3>
+<br>
+<br>
+<p4>🎯 কেন নিয়ন্ত্রণ জরুরি?
+জটিলতা প্রতিরোধে: ডায়াবেটিস নিয়ন্ত্রণে না থাকলে ধীরে ধীরে শরীরের গুরুত্বপূর্ণ অঙ্গগুলো ক্ষতিগ্রস্ত হয়। নিয়ন্ত্রণে রাখলে এসব জটিলতা অনেকাংশে প্রতিরোধ করা যায়।
+
+জীবনমান উন্নয়নে: সুগার নিয়ন্ত্রণে থাকলে রোগীর দৈনন্দিন জীবন স্বাভাবিক থাকে, কর্মক্ষমতা বজায় থাকে এবং মানসিক প্রশান্তি আসে।
+
+ওষুধের কার্যকারিতা: শুধু ওষুধ খেলেই যথেষ্ট নয়; জীবনযাত্রার পরিবর্তন ও খাদ্যনিয়ন্ত্রণের মাধ্যমে ওষুধের কার্যকারিতা বাড়ানো যায়।
+
+অর্থনৈতিক সাশ্রয়: ডায়াবেটিসজনিত জটিলতা চিকিৎসা ব্যয় বহুগুণে বাড়িয়ে দেয়। নিয়ন্ত্রণে রাখলে এই ব্যয় অনেকাংশে কমানো সম্ভব।
+
+</p4>
+<br>
+<br>
+<p5>🛡️ কীভাবে নিয়ন্ত্রণে রাখা যায়?
+নিয়মিত রক্তে গ্লুকোজ পরীক্ষা: নিজের অবস্থান জানলে নিয়ন্ত্রণ সহজ হয়।
+
+সুষম খাদ্য গ্রহণ: কম চিনি, কম কার্বোহাইড্রেট, বেশি আঁশযুক্ত খাবার গ্রহণ করা উচিত।
+
+নিয়মিত ব্যায়াম: হাঁটা, সাইক্লিং, যোগব্যায়াম ইত্যাদি রক্তে শর্করার মাত্রা কমাতে সাহায্য করে।
+
+চিকিৎসকের পরামর্শ মেনে চলা: ওষুধের মাত্রা, ইনসুলিনের সময়, খাদ্যতালিকা—সবকিছু চিকিৎসকের নির্দেশ অনুযায়ী হওয়া উচিত।
+
+মানসিক চাপ নিয়ন্ত্রণ: স্ট্রেস হরমোন রক্তে গ্লুকোজ বাড়াতে পারে, তাই মানসিক প্রশান্তি বজায় রাখা জরুরি।></p5>
+<br>
+<br>
+<p6>🔍 উপসংহারঃ-
+ডায়াবেটিস নিয়ন্ত্রণ শুধু একটি স্বাস্থ্যগত চ্যালেঞ্জ নয়, এটি একটি জীবনধারা। ওষুধ বা ইনসুলিন গ্রহণের পাশাপাশি সচেতনতা, নিয়মিত পর্যবেক্ষণ, খাদ্য ও ব্যায়ামের সঠিক সমন্বয়ই পারে এই রোগকে নিয়ন্ত্রণে রাখতে। ডায়াবেটিস নিয়ন্ত্রণে থাকলে জীবন হয় সুস্থ, কর্মক্ষম ও আনন্দময়।</p6>
+<p7></p7>
+
     <script>
-        document.getElementById('Btn').onclick=function(){
-            let fbs=document.getElementById('fbs').value;
-            let rbs=document.getElementById('rbs').value;
-            if( rbs>=11.1 || fbs>=7){
-                window.alert('You are suffering from diabetes.please go to the physician and take approprite advice given by the doctor')
-        }else if(rbs<=3.8 || fbs<=3.8){
-            window.alert('Low/Hypoglycemia.please eat/ingest some sugary diet like sugar,sweet chocolate/biscuits etc')
-        }else if(rbs<=7.8 && fbs<=5.9){ 
-            window.alert('You are free from diabetes.please adopt a healthy lifestyle')
-        }else
-        window.alert('you are in the state of prediabetes.please be careful and do physical exercise regularly and keep your bodyweight within normal physiological limit')
-    }
+        function dm() {
+            const inputValue = parseFloat(document.getElementById('in').value);
+            const para = document.getElementById('para');
 
-        
+            if (isNaN(inputValue)) {
+                para.textContent = '⚠️ Please enter a valid number for blood sugar level.';
+                return;
+            }
 
-        
+            if (inputValue >= 7.1) {
+                para.textContent = '🩺আপনি সম্ভাবত ডায়াবেটিসে ভুগছেন। একজন অভিজ্ঞ ডাক্তারের পরামর্শ নিন/ল্যাবে পরীক্ষা করে নিশ্চিত হউন।Perhabs you are suffering from diabetes. Please consult a physician for appropriate treatment.';
+            } else if (inputValue >= 5.6) {
+                para.textContent = '⚠️ চিকিৎসা বিজ্ঞানের ভাষায় এটাকে বলা হয় ডায়াবেটিসের  পূর্ব অবস্থা,এভাবে দীর্ঘদিন থাকলে ডায়াবেটিসে আক্রান্ত হওয়ার ঝুকি থাকে,তাই সময় থাকতে সচেতন হউন ,দেহের ওজন  বেশি থাকলে সেটাকে কমিয়ে স্বাভাবিক সীমার মধ্যে রাখুন এবং  প্রতিদিন ব্যায়াম করুন । This is a prediabetic condition. Maintain a healthy weight, exercise regularly, and avoid sugary foods.';
+            } else if (inputValue <= 3.9) { 
+                para.textContent=' আপনার রক্তের সুগারের মাত্রা স্বাভাবিক সীমা থেকে থেকে কম, এখনি মিষ্টিজাতীয় কোন খাবার গ্রহণ করুন ।আপনি যদি ডায়াবেটিসের ওষুধ বা ইনসুলিন গ্রহণ করে থাকেন তাহলে আপনার ডাক্তারের সাথে যোগাযোগ করুন hypoglycemia detected.please consume sugar or sweet food immediately.**for nondiabetic person,hypoglycemia will be called below 3.1'
+            }else{
+                para.textContent='your blood sugar level is within the normal range,(you are free from diabetes).please maintain healthy lifebstyle'
+            }
+        }
+           
+         function dm2() {
+            const inputValue2 = parseFloat(document.getElementById('int').value);
+            const para = document.getElementById('para');
 
+            if (isNaN(inputValue2)) {
+                para.textContent = '⚠️ Please enter a valid number for blood sugar level.';
+                return;
+            }
+
+            if (inputValue2 >= 11.1) {
+                para.textContent = '🩺আপনার সম্ভাবত ডায়াবেটিস  হয়েছে, আপনি একজন অভিজ্ঞ ডাক্তারের  পরামর্শ নিন/ পুনরায়  ল্যাবরেটরিতে পরীক্ষা করে নিশ্চিত হউন । You are suffering from diabetes. Please consult a physician for appropriate treatment.';
+            } else if (inputValue2 >= 7.8) {
+                para.textContent = '⚠️ চিকিৎসা বিজ্ঞানের ভাষায় এটাকে বলে ডায়াবেটিসের  পূর্ব অবস্থা । দীর্ঘদিন এই অবস্থা বিরাজিত থাকলে ডায়াবেটিস হওয়ার ঝুকি থাকে ।তাই নিয়মিত ব্যায়াম করুন, দেহের ওজন বেশি থাকলে সেটা কমিয়ে ফেলুন ।This is a prediabetic condition. Maintain a healthy weight, exercise regularly, and avoid sugary foods.';
+            } else if (inputValue2 <= 3.9) {
+                para.textContent = '🍬 আপনার রক্তের সুগারের মাত্রা স্বাভাবিক সীমা থেকে কম ।আপনি এখনি মিষ্টি জাতীয় কোন খাবার খান ।আপনি যদি ডায়াবেটিসের কোন ওষুধ/ ইনসুলিন গ্রহণ করে থাকেন তাহলে আপনার ডাক্তারের সাথে তাড়াতাড়ি যোগাযোগ করুন Hypoglycemia detected. Please consume sugar or sweet food immediately.** for non diabetic person hypoglycemia will be called when below 3.1';
+            } else {
+                para.textContent = '✅ Your blood sugar level is within the normal range,you are free from diabetes. please maintain healthy life style.';
+            }
+        }
     </script>
+</body>
+
 </body>
 </html>
